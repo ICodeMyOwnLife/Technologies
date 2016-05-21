@@ -1,0 +1,5 @@
+1. Cannot start server at Url like "192.168.1.2:1000"
+	1.1 Run cmd as Administrator
+	1.2 Run command > netsh http add urlacl url=http://+:1000/ user=EVERYONE
+	1.3 Use WebApp.Start("http://+:1000) instead of WebApp.Start("http://192.168.1.2:1000") when starting server
+	1.4 Use new HubConnection("http://192.168.1.2:1000") when initializing HubConnection
